@@ -1,0 +1,28 @@
+{
+    "name": "wefabric/array-to-simplexml",
+    "description": "Tiny package to convert arrays to SimpleXML objects",
+    "license": "MIT",
+    "keywords": [
+        "wefabric",
+        "array",
+        "empty"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Wefabric\\ArrayToSimplexml\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevin Nauta",
+            "email": "kevin@wefabric.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ext-simplexml": "*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "6.1.x-dev"
+    }
+}
