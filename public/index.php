@@ -6,6 +6,11 @@ require __DIR__.'/../vendor/autoload.php';
 
 $data = [
     'breakfast_menu' => [
+        'days' => [
+            'Monday',
+            'Tuesday',
+            'Wednesday'
+        ],
         'food' => [
             // 0 =>
             [
@@ -37,9 +42,15 @@ $data = [
 echo '<h2>Input</h2>';
 dump($data);
 
-echo '<h2>Output</h2>';
+echo '<h2>Output (default)</h2>';
 $xml = new SimpleXMLElement('<Object xmlns:xs="http://www.w3.org/2001/XMLSchema" />');
-ArrayToSimplexml::convert($xml, $data);
+ArrayToSimplexml::convert($xml, $data, stripNumericKeys: false);
 dump($xml);
+dump($xml->asXML());
 
+echo '<h2>Output without numeric keys</h2>';
+$xml = new SimpleXMLElement('<Object xmlns:xs="http://www.w3.org/2001/XMLSchema" />');
+ArrayToSimplexml::convert($xml, $data, stripNumericKeys: true);
+dump($xml);
+dump($xml->asXML());
 
