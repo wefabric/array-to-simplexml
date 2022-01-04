@@ -1,6 +1,6 @@
 # array-to-simplexml
 
-Tiny PHP 7.0+ package that converts an array to a SimpleXML object.
+Tiny PHP 7.1+ package that converts an array to a SimpleXML object.
 
 ## Usage
 
