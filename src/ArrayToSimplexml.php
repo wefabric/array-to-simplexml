@@ -7,10 +7,9 @@ use SimpleXMLElement;
 class ArrayToSimplexml
 {
 
-
     /**
      * Recursive function to add all members of an array to the given XML element.
-     * The opposite of @see \Wefabric\simplexml-to-array.
+     * The opposite of Wefabric\simplexml-to-array.
      * @param SimpleXMLElement $object the root-tag of the object. Must be supplied.
      */
     static function convert(SimpleXMLElement $object, array $data, bool $stripNumericKeys = false)

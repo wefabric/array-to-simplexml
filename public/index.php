@@ -5,12 +5,34 @@ use Wefabric\ArrayToSimplexml\ArrayToSimplexml;
 require __DIR__.'/../vendor/autoload.php';
 
 $data = [
-    'this' => 'is a string',
-    'child' => [
-        'here'=> 'is a child',
-    ],
-    'one' => 1
+    'breakfast_menu' => [
+        'food' => [
+            // 0 =>
+            [
+                'name' => 'Belgian Waffles',
+                'price' => '€5.95',
+                'description' => 'Two of our famous Belgian Waffles with plenty of real maple syrup',
+                'calories' => 650
+            ],
+            // 1 =>
+            [
+                'name' => 'Strawberry Belgian Waffles',
+                'price' => '€7.95',
+                'description' => 'Light Belgian waffles covered with strawberries and whipped cream',
+                'calories' => 900
+            ],
+            // 2 =>
+            [
+                'name' => 'Homestyle Breakfast',
+                'price' => '€6.95',
+                'description' => 'Two eggs, bacon or sausage, toast, and our ever-popular hash browns',
+                'calories' => 950
+            ]
+
+        ]
+    ]
 ];
+//Copied from: https://www.w3schools.com/xml/xml_examples.asp > View an XML food menu
 
 echo '<h2>Input</h2>';
 dump($data);
